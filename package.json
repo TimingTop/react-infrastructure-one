@@ -1,0 +1,43 @@
+{
+  "name": "react-infrastructure-one",
+  "version": "1.0.0",
+  "description": "a react infrastructure framwork",
+  "main": "index.js",
+  "scripts": {
+    "test": " echo \" hi !!!!!!!!\" && exit 0 ",
+    "test-001": "webpack --config webpack.dev.001.js --env.vp=test --watch --progress --color",
+    "test-002": "webpack-dev-server --config webpack.dev.002.js --open",
+    "webpack-dev": "webpack --config webpack.dev.js --env.vp=test --watch --progress --color",
+    "test-003": "webpack --config webpack.dev.003.js --watch --progress --color",
+    "build-win-001": "webpack --config webpack.config.com.001.js --progress"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "javascript",
+    "js"
+  ],
+  "author": "Timing",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.15.1",
+    "eslint-loader": "^2.1.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
