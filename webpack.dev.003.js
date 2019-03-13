@@ -5,13 +5,18 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     devtool: 'source-map',
-    // entry: {
-        
-    // },
-    entry: __dirname + '/src/web/test003/app.jsx',
+    entry: {
+        vendor: [paths.join(__dirname, '/src/web/test003/app.jsx')],
+        app: [paths.join(__dirname, '/src/web/test003/Heller.jsx')],
+        react: [
+            'react',
+            "react-dom"
+        ]
+    },
+    // entry: __dirname + '/src/web/test003/app.jsx',
     output: {
         path: __dirname + "/build/test003",
-        filename: "bundle.003.js"
+        filename: "[name].003.js"
     },
     devServer: {
         contentBase: "./",
