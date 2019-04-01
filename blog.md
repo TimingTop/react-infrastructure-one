@@ -20,6 +20,17 @@ install --save-dev html-webpack-plugin
 
 npm install --save-dev postcss-loader
 // 分离 css js文件
-install --save-dev extract-text-webpack-plugin
+// 用法 https://github.com/webpack-contrib/extract-text-webpack-plugin
+install --save-dev extract-text-webpack-plugin   // 不适用
+
+// 用法：https://github.com/webpack-contrib/mini-css-extract-plugin
+// 分离 css 文件，是根据 css 在那个 js里面分离，css的名称跟 js一致。
+npm install --save-dev mini-css-extract-plugin
+
+
+// 引入图片，如果图片不用 base64 ,就需要 file-loader
+npm install --save-dev file-loader
+npm install --save-dev url-loader
+
 
 ```

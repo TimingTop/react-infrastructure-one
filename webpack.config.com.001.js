@@ -1,16 +1,13 @@
 const paths = require("path"); // node 自带，处理路径
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const textWebpackPlugin = require('extract-text-webpack-plugin');
-
-// const extractCss = new textWebpackPlugin('styles.min.css');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
     devtool: 'source-map',
-    // entry: {
+    entry: {
         
-    // },
-    entry: __dirname + '/src/web/test003/app.jsx',
+    },
     output: {
         path: __dirname + "/build/test004",
         filename: "bundle.com.001-[hash].js"
@@ -57,8 +54,7 @@ const config = {
             {
                 template: __dirname + "/src/web/index.html"
             }
-        ),
-        new textWebpackPlugin("[name].css", {allChunks: true})
+        )
     ]
 }
 
