@@ -19,7 +19,9 @@ const config = {
     // entry: __dirname + '/src/web/test003/app.jsx',
     output: {
         path: __dirname + "/build/test003",
-        filename: "[name].003.js"
+        filename: "js/[name].003.js",
+        // 异步加载的库名字
+        chunkFilename: "js/[name].js"
     },
     devServer: {
         contentBase: "./",
@@ -33,9 +35,9 @@ const config = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: [
-                            "env", "react"
-                        ]
+                        // presets: [
+                        //     "env", "react"
+                        // ]
                     }
                 },
                 exclude: /node_modules/

@@ -9,7 +9,7 @@
     "test-002": "webpack-dev-server --config webpack.dev.002.js --open",
     "webpack-dev": "webpack --config webpack.dev.js --env.vp=test --watch --progress --color",
     "test-003": "webpack --config webpack.dev.003.js --watch --progress --color",
-    "build-win-001": "webpack --config webpack.config.com.001.js --progress"
+    "build-001": "webpack --config webpack.config.com.001.js --progress --color"
   },
   "keywords": [
     "react",
@@ -20,10 +20,12 @@
   "author": "Timing",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "eslint": "^5.15.1",
     "eslint-loader": "^2.1.2",
@@ -39,8 +41,13 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "@material-ui/core": "^3.9.3",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-intl": "^2.8.0",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1"
   }
 }
