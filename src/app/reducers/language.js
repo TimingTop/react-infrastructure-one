@@ -1,6 +1,6 @@
 import * as ActionTypes from '../constants/actionTypes';
 
-export function language(state = {
+export default function language(state = {
     locale: 'en',
     messages: {},
 }, action = {}) {

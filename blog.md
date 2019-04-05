@@ -70,4 +70,10 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-re
 npm install --save-dev babel-loader
 
 
+// 支持 异步 async  await
+npm install --save-dev @babel/plugin-transform-async-to-generator
+// 支持 yield
+npm install --save-dev @babel/plugin-transform-regenerator
+// 
+npm install --save-dev @babel/plugin-transform-runtime
 ```

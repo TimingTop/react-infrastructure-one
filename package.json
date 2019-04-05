@@ -9,7 +9,9 @@
     "test-002": "webpack-dev-server --config webpack.dev.002.js --open",
     "webpack-dev": "webpack --config webpack.dev.js --env.vp=test --watch --progress --color",
     "test-003": "webpack --config webpack.dev.003.js --watch --progress --color",
-    "build-001": "webpack --config webpack.config.com.001.js --progress --color"
+    "build-001": "webpack-dev-server --config webpack.config.com.001.js",
+    "build-002": "webpack --config webpack.config.com.001.js --progress --color",
+    "build-003": "webpack-dev-server --config webpack.config.js"
   },
   "keywords": [
     "react",
@@ -23,6 +25,7 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-async-to-generator": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",

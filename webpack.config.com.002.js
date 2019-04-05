@@ -6,38 +6,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = {
     devtool: 'source-map',
     entry: {
-        // build 出来有 app.xx.js, tool.xx.js, react.xx.js, jq.xx.js
-        // 跟 output 的 filename 配套使用
-        app: [
-            // 加入异步引入语法，promise，防止不支持的 浏览器报错，需要引入改包
-            "@babel/polyfill",
-            paths.join(__dirname, '/src/web/app-one/app.jsx'),
-        ],
-        // tool: [paths.join(__dirname, '/src/web/test003/Heller.jsx')],
-        react: [
-            'react',
-            "react-dom",
-            "react-router-dom",
-            "redux",
-            "react-redux",
-            "react-intl"
-        ],
-        materialUi: [
-            "@material-ui/core"
-        ]
+       main: paths.join(__dirname, '/src/web/app-one/app2.jsx')
     },
-    // entry: __dirname + '/src/web/test003/app.jsx',
     output: {
-        path: __dirname + "/build/com001",
+        path: __dirname + "/build/com002",
         filename: "[name].js",
         // 异步加载的库名字
         chunkFilename: "[name].js"
     },
     devServer: {
-        contentBase: paths.join(__dirname, '/build/com001'),
+        contentBase: paths.join(__dirname, '/build/com002'),
         inline: true,
         hot: true,
-        port: 9000
+        port: 9000,
     },
     mode: "development",
     module: {
@@ -98,7 +79,7 @@ const config = {
         ]
     },
     resolve: {
-        extensions: ['.js', ".jsx"],
+        extensions: [".jsx", ".js"],
         modules: ["node_modules", paths.resolve(__dirname, "node_modules")],
         alias: {
             app: paths.resolve(__dirname, 'src/app/')
