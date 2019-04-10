@@ -9,7 +9,7 @@
     "test-002": "webpack-dev-server --config webpack.dev.002.js --open",
     "webpack-dev": "webpack --config webpack.dev.js --env.vp=test --watch --progress --color",
     "test-003": "webpack --config webpack.dev.003.js --watch --progress --color",
-    "build-001": "webpack-dev-server --config webpack.config.com.001.js",
+    "build-001": "webpack-dev-server --config webpack.config.com.001.js --progress --colors --inline",
     "build-002": "webpack --config webpack.config.com.001.js --progress --color",
     "build-003": "webpack-dev-server --config webpack.config.js"
   },
@@ -46,6 +46,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@material-ui/core": "^3.9.3",
+    "axios": "^0.18.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-intl": "^2.8.0",

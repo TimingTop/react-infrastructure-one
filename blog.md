@@ -76,4 +76,7 @@ npm install --save-dev @babel/plugin-transform-async-to-generator
 npm install --save-dev @babel/plugin-transform-regenerator
 // 
 npm install --save-dev @babel/plugin-transform-runtime
+
+// 安装异步请求 axios
+npm install --save axios
 ```
